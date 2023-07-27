@@ -13,7 +13,6 @@ import org.json.JSONObject;
 
 public class ConversorDivisas {
 	
-	public static String mensajeDivisa = "";
 	public static double obtenerMoneda(String divOrigen, String divDestino, String cantidad) throws IOException {
 				
 		
@@ -47,6 +46,7 @@ public class ConversorDivisas {
 				
 				
 			}
+			// Obtener el valor "conversion_result" de archivo JSON 
 			try {
 				exchangeRate = jsonResponse.getDouble("conversion_result");
 			} catch (JSONException e) {

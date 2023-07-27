@@ -5,7 +5,6 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
@@ -41,7 +40,7 @@ public class Principal extends JFrame {
 	private final JLabel lblNewLabel = new JLabel("New label");
 	private JLabel lblTitulo = new JLabel("Conversor");
 
-	Font letra = new Font("Roboto Condensed", Font.PLAIN, 17);
+	
 	Font letraCant = new Font("Roboto Condensed", Font.PLAIN, 25);
 	
 
@@ -77,7 +76,7 @@ public class Principal extends JFrame {
 		});
 		btnConvertir.setFont(new Font("Roboto Condensed", Font.PLAIN, 20));
 		btnConvertir.setBackground(new Color(0, 153, 51));
-		btnConvertir.setBounds(174, 287, 120, 38);
+		btnConvertir.setBounds(186, 286, 130, 38);
 		panel.add(btnConvertir);
 
 		JButton Regresar = new JButton("Regresar");
@@ -98,7 +97,7 @@ public class Principal extends JFrame {
 		txtEntrada.setText("1");
 		txtEntrada.setBackground(new Color(255, 255, 255));
 		txtEntrada.setHorizontalAlignment(SwingConstants.RIGHT);
-		txtEntrada.setBounds(139, 90, 192, 38);
+		txtEntrada.setBounds(132, 90, 236, 38);
 		txtEntrada.setFont(letraCant);
 		panel.add(txtEntrada);
 		txtEntrada.setColumns(10);
@@ -108,69 +107,71 @@ public class Principal extends JFrame {
 		txtResultado.setBackground(new Color(240, 248, 255));
 		txtResultado.setEditable(false);
 		txtResultado.setFont(letraCant);
-		txtResultado.setBounds(139, 352, 192, 48);
+		txtResultado.setBounds(150, 354, 192, 48);
 		panel.add(txtResultado);
 		txtResultado.setColumns(10);
 
 		lblDatoEntrada = new JLabel("De");
 		lblDatoEntrada.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblDatoEntrada.setFont(new Font("Roboto Condensed", Font.PLAIN, 20));
-		lblDatoEntrada.setBounds(28, 151, 101, 38);
+		lblDatoEntrada.setBounds(16, 151, 101, 38);
 		panel.add(lblDatoEntrada);
 
 		lblResult = new JLabel("A");
 		lblResult.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblResult.setFont(new Font("Roboto Condensed", Font.PLAIN, 20));
-		lblResult.setBounds(28, 210, 101, 38);
+		lblResult.setBounds(16, 213, 101, 38);
 		panel.add(lblResult);
 
-		listaElementos(eleccion);
+		
 		comboFirstOpt.setBackground(new Color(255, 255, 255));
-		comboFirstOpt.setFont(new Font("Roboto Condensed", Font.PLAIN, 20));
+		comboFirstOpt.setFont(new Font("Roboto Condensed", Font.PLAIN, 19));
 		comboFirstOpt.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				labelFirst(eleccion);
 			}
 		});
-		comboFirstOpt.setBounds(139, 151, 192, 38);
+		comboFirstOpt.setBounds(132, 151, 236, 38);
 		panel.add(comboFirstOpt);
-		comboSecOpt.setFont(new Font("Roboto Condensed", Font.PLAIN, 20));
+		
+		comboSecOpt.setFont(new Font("Roboto Condensed", Font.PLAIN, 19));
 		comboSecOpt.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				labelSecond(eleccion);
 			}
 		});
 
-		comboSecOpt.setBounds(139, 213, 192, 38);
+		comboSecOpt.setBounds(132, 213, 236, 38);
 		panel.add(comboSecOpt);
 
 		lblTitulo.setFont(new Font("Roboto Condensed", Font.BOLD, 23));
 		lblTitulo.setBounds(122, 41, 263, 38);
 		panel.add(lblTitulo);
 
-		lblDivUno.setBounds(341, 90, 82, 37);
+		lblDivUno.setBounds(378, 90, 82, 37);
 		lblDivUno.setFont(new Font("Roboto Condensed", Font.PLAIN, 20));
 		panel.add(lblDivUno);
 		divDos.setHorizontalAlignment(SwingConstants.CENTER);
 
-		divDos.setBounds(139, 401, 192, 38);
+		divDos.setBounds(150, 401, 192, 38);
 		divDos.setFont(new Font("Roboto Condensed", Font.PLAIN, 20));
 		panel.add(divDos);
 
 		lblCantidad = new JLabel("Cantidad");
 		lblCantidad.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblCantidad.setFont(new Font("Roboto Condensed", Font.PLAIN, 20));
-		lblCantidad.setBounds(40, 91, 89, 38);
+		lblCantidad.setBounds(28, 91, 89, 38);
 		panel.add(lblCantidad);
 		
 		lblNewLabel.setBounds(480, 20, 46, 48);
-
 		panel.add(lblNewLabel);
+		
+		listaElementos(eleccion);
 		
 
 	}
 
-	public void listaElementos(int eleccion) {
+	private void listaElementos(int eleccion) {
 		eleccion = this.eleccion;
 
 		if (eleccion == 2) {
@@ -228,7 +229,7 @@ public class Principal extends JFrame {
 
 	}
 
-	public void labelFirst(int eleccion) {
+	private void labelFirst(int eleccion) {
 		eleccion = this.eleccion;
 
 		if (eleccion == 2) {
@@ -241,7 +242,7 @@ public class Principal extends JFrame {
 		}
 	}
 
-	public void labelSecond(int eleccion) {
+	private void labelSecond(int eleccion) {
 		eleccion = this.eleccion;
 
 		if (eleccion == 2) {

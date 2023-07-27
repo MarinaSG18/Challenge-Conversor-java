@@ -20,8 +20,6 @@ public class MenuTemperatura {
 		String opt = entrada+"_"+salida;
 		
 		
-		
-		
 		switch (opt) {
 		case "CELCIUS_FAHRENHEIT":
 			resultado = ConversorTemperatura.CelsiusToFahrenheit(cantidad);

@@ -23,7 +23,9 @@ public class Inicio extends JFrame{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	/**
+	 * Inicializando el panel Principal
+	 */
 	public Inicio() {
 		setForeground(new Color(0, 128, 192));
 		setBackground(new Color(0, 128, 192));
@@ -64,12 +66,9 @@ public class Inicio extends JFrame{
 		btnDivisa.setSize(new Dimension(24, 24));
 		
 		btnDivisa.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnDivisa.addActionListener(
-				new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						abrir(1);
-					}
-				});
+		btnDivisa.addActionListener((ActionEvent e) -> {
+                    abrir(1);
+                });
 		
 		
 		//Boton de Divisas
@@ -84,11 +83,9 @@ public class Inicio extends JFrame{
 		panel.add(btnDivisa);
 		
 		JButton btnTemp = new JButton("");
-		btnTemp.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				abrir(2);
-			}
-		});
+		btnTemp.addActionListener((ActionEvent e) -> {
+                    abrir(2);
+                });
 		btnTemp.setBorder(null);
 		btnTemp.setBackground(new Color(245, 255, 250));
 		btnTemp.setIcon(iconTemp);
@@ -119,18 +116,12 @@ public class Inicio extends JFrame{
 		
 	}
 	
-	public void abrir(int elecion) {
+	private void abrir(int elecion) {
 		
 		Principal principal = new Principal(elecion);
 		principal.setVisible(true);
 		setVisible(false);
 			
-	}
-	
-	
-	public void botones() {
-		
-		
 	}
 
 }
